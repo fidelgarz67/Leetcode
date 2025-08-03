@@ -3,14 +3,14 @@
             // Language: TypeScript
             // Link: https://leetcode.com/problems/find-words-containing-character/
 
-function findWordsContaining(words: string[], x: string): number[] {
-    for(let i = 0; i < words.length; i++){
-        for(let j = 0; j < [...words[i]].length; j++){
-    }
+function findWordsContaining(words: string[], x: string): number[] {
+    let ans:number[] = []
+    for(let i = 0; i < words.length; i++){
+        for(let j = 0; j < [...words[i]].length; j++){
+            if([...words[i]][j] === x){ ans.push (i)}
+        }
+    }
 
-        }
-    return [... new Set(ans)]
-    let ans:number[] = []
-            if([...words[i]][j] === x){ ans.push (i)}
-    // new sets will remove duplicate variables
+    // new sets will remove duplicate variables
+    return [... new Set(ans)]
 };
